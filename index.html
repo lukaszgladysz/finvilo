@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Finvilo – wspólne cele, pieniądze pod kontrolą</title>
+  <meta name="description" content="Spiszcie razem, na co odkładacie – mieszkanie, auto, wakacje – i zobaczcie, ile odkładać co miesiąc.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%236A4FD1'/%3E%3Cstop offset='1' stop-color='%23E25AC7'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='9' fill='url%28%23g%29'/%3E%3Cpath d='M10.5 9.5h12.5M10.5 16.5h8.5' stroke='%23fff' stroke-opacity='.4' stroke-width='3.6' stroke-linecap='round' fill='none'/%3E%3Cpath d='M10.5 24V9.5h7M10.5 16.5h3.5' stroke='%23fff' stroke-width='3.6' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3Ccircle cx='23' cy='9.5' r='2.1' fill='%23FFC247'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css?v=19">
+</head>
+<body>
+  <a class="skip" href="#kalkulator">Przejdź do kalkulatora</a>
+
+  <header class="nav" id="nav">
+    <a class="brand" href="#top" aria-label="Finvilo – strona główna">
+      <svg class="mark brand__mark" viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="mkNav" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6A4FD1"/><stop offset="1" stop-color="#E25AC7"/></linearGradient></defs><rect width="32" height="32" rx="9" fill="url(#mkNav)"/><path class="mark__track" d="M10.5 9.5h12.5M10.5 16.5h8.5"/><path class="mark__fill" d="M10.5 24V9.5h7M10.5 16.5h3.5"/><circle class="mark__goal" cx="23" cy="9.5" r="2.1"/></svg>
+      <span class="brand__word">finvilo</span>
+    </a>
+    <nav class="nav__links" aria-label="Sekcje">
+      <a href="#historia">Jak to działa</a>
+      <a href="#aplikacja">Aplikacja</a>
+      <a href="#funkcje">Funkcje</a>
+      <a href="#kalkulator">Kalkulator</a>
+      <a href="#test">Test prototypu</a>
+    </nav>
+    <a class="btn btn--small" href="#kalkulator">Policzcie swój cel</a>
+  </header>
+
+  <main id="top">
+    <!-- 0–3: opowieść sterowana przewijaniem -->
+    <section class="story" id="historia" aria-label="Jak Finvilo porządkuje wspólne pieniądze">
+      <div class="story__stage">
+        <div class="aurora" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        <svg class="story__svg" id="storySvg" aria-hidden="true"></svg>
+        <ul class="tags story__tags" id="storyTags" aria-label="Co jest w Finvilo"><li>Cele</li><li>Budżet</li><li>Wydatki</li><li>Alerty</li><li>We dwoje</li></ul>
+        <div class="story__copy">
+          <div class="chapter" data-ch="0">
+            <h1>Wspólne cele<span class="kern">.</span><br><span class="accent serif">Pieniądze pod kontrolą<span class="kern">.</span></span></h1>
+            <p class="lead">Konta, wydatki, budżet i cele pary – w jednym miejscu. Odkładajcie razem na <span class="rot" data-words="mieszkanie|wakacje|nowe auto|remont kuchni|wesele"><span class="rot__w">mieszkanie</span></span> i widzcie, dokąd idą Wasze pieniądze.</p>
+            <div class="actions">
+              <a class="shiny-cta" href="#kalkulator"><span>Policzcie swój cel</span></a>
+              <a class="link" href="#historia-1">Jak to działa</a>
+            </div>
+            <p class="hero-status"><span class="hs"><span class="pt pt--full" aria-hidden="true"></span>Kalkulator celu działa już teraz</span><span class="hs"><span class="pt pt--empty" aria-hidden="true"></span>Aplikacja w przygotowaniu</span></p>
+          </div>
+          <div class="chapter" data-ch="1" id="historia-1">
+            <p class="kicker">Każdy miesiąc coś zjada</p>
+            <h2>Pieniądze rozchodzą się w dziesięciu kierunkach.</h2>
+            <p>Rata, zakupy, przedszkole, prezent dla mamy… A&nbsp;na to, o&nbsp;czym marzycie, zostaje „jakoś”.</p>
+          </div>
+          <div class="chapter" data-ch="2">
+            <p class="kicker">Finvilo</p>
+            <h2>Wszystko w jednym miejscu.<br>I jeden wspólny kierunek.</h2>
+            <p>Konta, wydatki, budżet i cele – widoczne dla Was obojga, zamiast dziesięciu rozjechanych spraw.</p>
+          </div>
+          <div class="chapter" data-ch="3">
+            <p class="kicker">Jak to działa</p>
+            <h2>Od celu do spokojnego budżetu</h2>
+            <ol class="steps">
+              <li><b class="is-live">1</b><span>Wyznaczcie wspólny cel <em>działa już teraz</em></span></li>
+              <li><b>2</b><span>Zaplanujcie budżet domu <em>w przygotowaniu</em></span></li>
+              <li><b>3</b><span>Monitorujcie wydatki – razem <em>w przygotowaniu</em></span></li>
+            </ol>
+            <p class="steps__nogoal">Nie macie jeszcze celu? Zacznijcie od samego monitorowania wydatków.</p>
+            <a class="link" href="#aplikacja">Zobaczcie aplikację ↓</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- scena: niedziela wieczorem – jak wygląda planowanie bez Finvilo -->
+    <section class="chat" id="chaos" aria-labelledby="chatTitle">
+      <div class="wrap chat__grid">
+        <div class="chat__copy">
+          <p class="kicker">Niedziela, 21:47</p>
+          <h2 id="chatTitle" data-words>Wspólne życie. <mark class="hl hl--coral">Finanse w pięciu miejscach.</mark></h2>
+          <ul class="pains">
+            <li>Wydatki w dwóch aplikacjach banków i na trzech kartach.</li>
+            <li>Budżet w arkuszu, którego nikt nie aktualizuje od marca.</li>
+            <li>Cel „kiedyś” zamiast konkretnej kwoty i daty.</li>
+          </ul>
+        </div>
+        <div class="phone" aria-label="Przykładowa rozmowa pary o pieniądzach">
+          <div class="phone__top"><span class="av av--o">O</span><span class="av av--k">K</span><b>Ola i Kuba</b><small>online</small></div>
+          <div class="bubbles" id="bubbles">
+            <p class="bb bb--k">Ile nam zostało do wypłaty?</p>
+            <p class="bb bb--o">Nie wiem, muszę sprawdzić w dwóch apkach 😅</p>
+            <p class="bb bb--k">A kto w końcu płacił za prąd?</p>
+            <p class="bb bb--o">Chyba ja? Albo z konta wspólnego…</p>
+            <p class="bb bb--k bb--file"><span>XLS</span>budzet_domowy_FINAL_v3.xlsx</p>
+            <p class="bb bb--o">To wakacje w tym roku dalej aktualne?</p>
+            <p class="bb bb--k bb--typing" aria-hidden="true"><i></i><i></i><i></i></p>
+          </div>
+          <p class="phone__note">Przykładowa rozmowa</p>
+        </div>
+      </div>
+      <p class="chat__turn wrap"><span class="brand-inline">Finvilo.</span> <span class="serif">Jedno miejsce. Spokojna głowa.</span></p>
+    </section>
+
+    <!-- wstęga: wszystkie funkcje w jednym miejscu -->
+    <div class="ribbon" aria-hidden="true">
+      <div class="ribbon__row"><div class="ribbon__track"><span class="rb rb--violet"><i></i>Wspólne cele</span><span class="rb rb--mint"><i></i>Budżet domowy</span><span class="rb rb--coral"><i></i>Konta bankowe</span><span class="rb rb--sun"><i></i>Kategorie wydatków</span><span class="rb rb--violet"><i></i>Cotygodniowe alerty</span><span class="rb rb--mint"><i></i>Spotkania o pieniądzach</span><span class="rb rb--coral"><i></i>Jeden budżet, dwa telefony</span><span class="rb rb--sun"><i></i>Wszystko w jednym miejscu</span><span class="rb rb--violet"><i></i>Wspólne cele</span><span class="rb rb--mint"><i></i>Budżet domowy</span><span class="rb rb--coral"><i></i>Konta bankowe</span><span class="rb rb--sun"><i></i>Kategorie wydatków</span><span class="rb rb--violet"><i></i>Cotygodniowe alerty</span><span class="rb rb--mint"><i></i>Spotkania o pieniądzach</span><span class="rb rb--coral"><i></i>Jeden budżet, dwa telefony</span><span class="rb rb--sun"><i></i>Wszystko w jednym miejscu</span></div></div>
+      <div class="ribbon__row ribbon__row--rev"><div class="ribbon__track"><span class="rb rb--violet"><i></i>Wspólne cele</span><span class="rb rb--mint"><i></i>Budżet domowy</span><span class="rb rb--coral"><i></i>Konta bankowe</span><span class="rb rb--sun"><i></i>Kategorie wydatków</span><span class="rb rb--violet"><i></i>Cotygodniowe alerty</span><span class="rb rb--mint"><i></i>Spotkania o pieniądzach</span><span class="rb rb--coral"><i></i>Jeden budżet, dwa telefony</span><span class="rb rb--sun"><i></i>Wszystko w jednym miejscu</span><span class="rb rb--violet"><i></i>Wspólne cele</span><span class="rb rb--mint"><i></i>Budżet domowy</span><span class="rb rb--coral"><i></i>Konta bankowe</span><span class="rb rb--sun"><i></i>Kategorie wydatków</span><span class="rb rb--violet"><i></i>Cotygodniowe alerty</span><span class="rb rb--mint"><i></i>Spotkania o pieniądzach</span><span class="rb rb--coral"><i></i>Jeden budżet, dwa telefony</span><span class="rb rb--sun"><i></i>Wszystko w jednym miejscu</span></div></div>
+    </div>
+
+    <!-- 4: aplikacja – wszystko w jednym miejscu (poglądowo) -->
+    <section class="app" id="aplikacja" aria-labelledby="appTitle">
+      <div class="wrap">
+        <header class="app__head">
+          <p class="kicker">Aplikacja Finvilo</p>
+          <h2 id="appTitle" data-words><mark class="hl hl--sun">Wszystko w jednym miejscu.</mark> Dla Was obojga.</h2>
+          <p class="lead">Wszystkie konta i wydatki, budżet domu i postęp celów na jednym ekranie. Zaczynacie od celu, a Finvilo <mark class="hl hl--mint">pilnuje, żeby budżet go dowiózł</mark>.</p>
+          <p class="app__status"><span class="pt pt--empty" aria-hidden="true"></span>Podgląd aplikacji w przygotowaniu · dane fikcyjne</p>
+        </header>
+
+        <div class="dash-wrap">
+        <div class="float float--warn" data-depth="1.6" aria-hidden="true"><span class="al__ic">!</span><div><b>Jedzenie: 83% budżetu</b><small>zostało 8 dni · 370 zł</small></div></div>
+        <div class="float float--ok" data-depth="1.1" aria-hidden="true"><span class="al__ic">✓</span><div><b>Transport poniżej planu</b><small>140 zł zostaje w tym miesiącu</small></div></div>
+        <div class="float float--sun" data-depth="2.1" aria-hidden="true"><span class="al__ic">◎</span><div><b>Wakacje: 70% celu</b><small>zostały 3 600 zł</small></div></div>
+        <figure class="dash" aria-label="Poglądowy dashboard aplikacji Finvilo z fikcyjnymi danymi">
+          <div class="dash__bar">
+            <div class="dash__home">
+              <svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="mkDash" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6A4FD1"/><stop offset="1" stop-color="#E25AC7"/></linearGradient></defs><rect width="32" height="32" rx="9" fill="url(#mkDash)"/><path class="mark__track" d="M10.5 9.5h12.5M10.5 16.5h8.5"/><path class="mark__fill" d="M10.5 24V9.5h7M10.5 16.5h3.5"/><circle class="mark__goal" cx="23" cy="9.5" r="2.1"/></svg>
+              <div><b>Dom Oli i Kuby</b><span>Listopad · dzień 22 z 30</span></div>
+            </div>
+            <ul class="dash__accounts" aria-label="Konta">
+              <li><span class="pt pt--empty" aria-hidden="true"></span>Konto wspólne</li>
+              <li><span class="pt pt--empty" aria-hidden="true"></span>Konto Oli</li>
+              <li><span class="pt pt--empty" aria-hidden="true"></span>Karta Kuby</li>
+              <li class="dash__bank">Połączenie z bankiem – planowane</li>
+            </ul>
+          </div>
+
+          <div class="dash__kpis">
+            <div class="kpi"><span>Wpływy</span><b data-count="14200">14 200 zł</b></div>
+            <div class="kpi"><span>Wydane z budżetu</span><b data-count="8960">8 960 zł</b><small>z 10 100 zł</small></div>
+            <div class="kpi kpi--goal"><span>Na wspólne cele</span><b data-count="2725">2 725 zł</b><small>odłożone w tym miesiącu</small></div>
+            <div class="kpi kpi--ok"><span>Zostaje do końca miesiąca</span><b data-count="1140">1 140 zł</b></div>
+          </div>
+
+          <div class="dash__grid">
+            <section class="card card--chart" aria-label="Wydatki w listopadzie">
+              <header><h3>Wydatki w listopadzie</h3><div class="dch__legend"><span><i class="l-plan"></i>Plan</span><span><i class="l-real"></i>Wydatki</span></div></header>
+              <svg class="dch" viewBox="-6 0 616 214" aria-hidden="true">
+                <line x1="0" y1="196" x2="600" y2="196" class="dch__axis"/>
+                <path class="dch__plan" id="dashPlan" pathLength="1" d="M0 196 L40 137 L100 100 L600 20"/>
+                <path class="dch__real" id="dashReal" d="M0 196 L40 137 L100 98 L160 89 L220 79 L280 69 L340 58 L400 48 L440 40"/>
+                <g class="dch__pts" id="dashPts"><circle cx="40" cy="137" r="3.5" class="dch__pt"/><circle cx="100" cy="98" r="3.5" class="dch__pt"/><circle cx="160" cy="89" r="3.5" class="dch__pt"/><circle cx="220" cy="79" r="3.5" class="dch__pt"/><circle cx="280" cy="69" r="3.5" class="dch__pt"/><circle cx="340" cy="58" r="3.5" class="dch__pt"/><circle cx="400" cy="48" r="3.5" class="dch__pt"/><circle cx="440" cy="40" r="6" class="dch__now"/></g>
+                <text x="0" y="212" class="dch__t">1 lis</text><text x="440" y="212" class="dch__t" text-anchor="middle">dziś</text><text x="600" y="212" class="dch__t" text-anchor="end">30 lis</text>
+              </svg>
+              <p class="card__note">Prawie zgodnie z planem – jedzenie zbliża się do limitu.</p>
+            </section>
+
+            <section class="card card--goals" aria-label="Wspólne cele">
+              <header><h3>Wspólne cele</h3></header>
+              <ul class="goals">
+                <li style="--g:.27"><div><b>Mieszkanie</b><span>32 400 z 120 000 zł</span></div><i></i><small>maj 2030 · 2 125 zł / mies.</small></li>
+                <li style="--g:.70"><div><b>Wakacje</b><span>8 400 z 12 000 zł</span></div><i></i><small>maj 2027 · 600 zł / mies.</small></li>
+              </ul>
+            </section>
+
+            <section class="card card--budget" aria-label="Budżet domowy">
+              <header><h3>Budżet domowy</h3><span class="card__sub">wydane / plan</span></header>
+              <ul class="bud">
+                <li style="--v:1"><span>Mieszkanie i rachunki</span><b>3 400 / 3 400 zł</b><i></i></li>
+                <li style="--v:1"><span>Kredyt</span><b>2 100 / 2 100 zł</b><i></i></li>
+                <li class="is-warn" style="--v:.83"><span>Jedzenie</span><b>1 830 / 2 200 zł</b><i></i></li>
+                <li class="is-ok" style="--v:.8"><span>Transport</span><b>560 / 700 zł</b><i></i></li>
+                <li style="--v:.71"><span>Dzieci</span><b>640 / 900 zł</b><i></i></li>
+                <li style="--v:.54"><span>Inne</span><b>430 / 800 zł</b><i></i></li>
+              </ul>
+            </section>
+
+            <section class="card card--tx" aria-label="Ostatnie wydatki">
+              <header><h3>Ostatnie wydatki</h3><span class="card__sub">z kont, automatycznie</span></header>
+              <ul class="tx">
+                <li><span class="tx__c">Jedzenie</span><span>Zakupy spożywcze</span><em>Ola</em><b>−186 zł</b></li>
+                <li><span class="tx__c">Transport</span><span>Paliwo</span><em>Kuba</em><b>−240 zł</b></li>
+                <li><span class="tx__c">Dzieci</span><span>Przedszkole – wyżywienie</span><em>Wspólne</em><b>−320 zł</b></li>
+                <li><span class="tx__c">Inne</span><span>Prezent urodzinowy</span><em>Kuba</em><b>−150 zł</b></li>
+              </ul>
+            </section>
+
+            <section class="card card--meet" aria-label="Wasze spotkanie">
+              <header><h3>Wasze spotkanie o pieniądzach</h3></header>
+              <p class="meet__when">Niedziela, 19:00 · podsumowanie listopada</p>
+              <ol class="meet__list">
+                <li>Jedzenie: 83% budżetu, zostało 8 dni</li>
+                <li>Wakacje: 70% celu – zostały 3 600 zł</li>
+                <li>Budżet na grudzień: prezenty i święta</li>
+              </ol>
+            </section>
+          </div>
+          <figcaption class="dash__note">Poglądowy ekran aplikacji w przygotowaniu · dane fikcyjne</figcaption>
+        </figure>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 5: funkcje – od celu do alertów -->
+    <section class="feats" id="funkcje" aria-labelledby="featsTitle">
+      <div class="wrap">
+        <header class="feats__head">
+          <p class="kicker">Jak Finvilo Wam pomoże</p>
+          <h2 id="featsTitle" data-words>Od wspólnego celu do <mark class="hl hl--violet">pieniędzy pod kontrolą</mark></h2>
+          <ul class="legend">
+            <li><span class="pt pt--full" aria-hidden="true"></span>Działa już teraz</li>
+            <li><span class="pt pt--empty" aria-hidden="true"></span>W przygotowaniu</li>
+          </ul>
+        </header>
+
+        <div class="feats__list" id="featsList">
+          <article class="feat is-live">
+            <span class="feat__dot" aria-hidden="true"></span>
+            <div class="feat__text">
+              <p class="feat__num">01 · Cele</p>
+              <h3 data-words>Wyznaczcie <mark class="hl hl--sun">wspólne cele</mark></h3>
+              <p>Mieszkanie, auto, wakacje – wpiszcie kwotę i termin, a Finvilo policzy, ile odkładać co miesiąc. Ta kwota trafia potem do Waszego budżetu.</p>
+              <dl class="minis"><div><dt>Kwota</dt><dd>ile odkładać co miesiąc</dd></div><div><dt>Termin</dt><dd>kiedy osiągniecie cel</dd></div><div><dt>Postęp</dt><dd>ile już macie</dd></div></dl>
+              <a class="link" href="#kalkulator">Policzcie swój cel teraz ↓</a>
+            </div>
+            <div class="feat__screen fs">
+              <header class="fs__top"><h4>Wasze cele</h4><span class="badge badge--live"><span class="pt pt--full" aria-hidden="true"></span>Działa już teraz</span></header>
+              <ul class="goals goals--big">
+                <li style="--g:.27"><div><b>Mieszkanie</b><span>32 400 z 120 000 zł</span></div><i></i><small>maj 2030 · 2 125 zł / mies.</small></li>
+                <li style="--g:.70"><div><b>Wakacje</b><span>8 400 z 12 000 zł</span></div><i></i><small>maj 2027 · 600 zł / mies.</small></li>
+                <li style="--g:.12"><div><b>Nowe auto</b><span>4 800 z 40 000 zł</span></div><i></i><small>listopad 2029 · 980 zł / mies.</small></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="feat">
+            <span class="feat__dot" aria-hidden="true"></span>
+            <div class="feat__text">
+              <p class="feat__num">02 · Konta i transakcje</p>
+              <h3 data-words>Wszystkie konta i wydatki <mark class="hl hl--mint">w jednym miejscu</mark></h3>
+              <p>Połączycie konta i karty Was obojga, a wydatki same pojawią się w Finvilo. Bez przepisywania paragonów i bez pytania „ile nam jeszcze zostało?”.</p>
+              <dl class="minis"><div><dt>Automatycznie</dt><dd>wydatki same wpadają</dd></div><div><dt>Razem</dt><dd>konta Was obojga</dd></div><div><dt>Saldo</dt><dd>ile macie łącznie</dd></div></dl>
+            </div>
+            <div class="feat__screen fs">
+              <header class="fs__top"><h4>Konta</h4><span class="badge"><span class="pt pt--empty" aria-hidden="true"></span>Połączenie z bankiem – planowane</span></header>
+              <ul class="acc">
+                <li><span class="acc__ic">W</span><div><b>Konto wspólne</b><small>ostatnia aktualizacja: dziś</small></div><b class="acc__v">6 240 zł</b></li>
+                <li><span class="acc__ic">O</span><div><b>Konto Oli</b><small>ostatnia aktualizacja: dziś</small></div><b class="acc__v">3 115 zł</b></li>
+                <li><span class="acc__ic">K</span><div><b>Karta Kuby</b><small>ostatnia aktualizacja: dziś</small></div><b class="acc__v">−840 zł</b></li>
+                <li class="acc__sum"><span>Razem</span><b>8 515 zł</b></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="feat">
+            <span class="feat__dot" aria-hidden="true"></span>
+            <div class="feat__text">
+              <p class="feat__num">03 · Kategorie i budżet</p>
+              <h3 data-words>Kategorie dopasowane do <mark class="hl hl--violet">Waszego domu</mark></h3>
+              <p>Finvilo zaproponuje kategorię dla każdego wydatku – Wy tylko zatwierdzacie albo zmieniacie. Ustawcie limity na miesiąc i od razu widzicie, ile zostało.</p>
+              <dl class="minis"><div><dt>Podpowiedź</dt><dd>kategoria w jedno kliknięcie</dd></div><div><dt>Limit</dt><dd>ile zostało w kategorii</dd></div><div><dt>Własne</dt><dd>dodacie swoje kategorie</dd></div></dl>
+            </div>
+            <div class="feat__screen fs">
+              <header class="fs__top"><h4>Nowy wydatek</h4><span class="badge"><span class="pt pt--empty" aria-hidden="true"></span>W przygotowaniu</span></header>
+              <div class="cat">
+                <div class="cat__tx"><div><b>Przedszkole – wyżywienie</b><small>Konto wspólne · wczoraj</small></div><b>−320 zł</b></div>
+                <p class="cat__ask">Finvilo proponuje kategorię:</p>
+                <div class="cat__chips"><span class="is-on">Dzieci</span><span>Jedzenie</span><span>Rachunki</span><span>Transport</span><span>Zdrowie</span><span>Prezenty</span><span>+ Własna</span></div>
+                <div class="cat__btns"><span class="cat__ok">Zatwierdź</span><span class="cat__ch">Zmień</span></div>
+                <div class="cat__lim"><span>Dzieci w listopadzie</span><b>640 / 900 zł</b><i style="--v:.71"></i></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="feat">
+            <span class="feat__dot" aria-hidden="true"></span>
+            <div class="feat__text">
+              <p class="feat__num">04 · We dwoje</p>
+              <h3 data-words>Jeden budżet, <mark class="hl hl--coral">dwa telefony</mark></h3>
+              <p>Oboje widzicie to samo: wspólne konto, swoje wydatki i postęp celów. Możecie podejrzeć, kto ile wydał w danej kategorii – bez liczenia na kartce i bez kłótni o rachunki.</p>
+              <dl class="minis"><div><dt>Wspólne</dt><dd>jeden budżet dla domu</dd></div><div><dt>Kto ile</dt><dd>podgląd wydatków osób</dd></div><div><dt>Dostęp</dt><dd>oboje widzicie to samo</dd></div></dl>
+            </div>
+            <div class="feat__screen fs">
+              <header class="fs__top"><h4>Wydatki w listopadzie</h4><span class="badge"><span class="pt pt--empty" aria-hidden="true"></span>W przygotowaniu</span></header>
+              <div class="duo">
+                <div class="duo__seg"><span class="is-on">Razem</span><span>Ola</span><span>Kuba</span></div>
+                <div class="duo__people"><span class="av av--o">O</span><span class="av av--k">K</span><small>Ola i Kuba mają dostęp</small></div>
+                <ul class="duo__rows">
+                  <li><span>Jedzenie</span><i style="--a:.55;--b:.45"></i><b>1 830 zł</b></li>
+                  <li><span>Transport</span><i style="--a:.2;--b:.8"></i><b>560 zł</b></li>
+                  <li><span>Dzieci</span><i style="--a:.5;--b:.5"></i><b>640 zł</b></li>
+                  <li><span>Inne</span><i style="--a:.35;--b:.65"></i><b>430 zł</b></li>
+                </ul>
+                <div class="duo__legend"><span><i class="o"></i>Ola</span><span><i class="k"></i>Kuba</span></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="feat">
+            <span class="feat__dot" aria-hidden="true"></span>
+            <div class="feat__text">
+              <p class="feat__num">05 · Alerty i spotkania</p>
+              <h3 data-words>Cotygodniowe alerty, <mark class="hl hl--coral">zanim będzie za późno</mark></h3>
+              <p>Co tydzień Finvilo powie Wam, co idzie zgodnie z planem, a co zagraża celom. Raz w miesiącu przygotuje krótkie podsumowanie na Wasze spotkanie o pieniądzach.</p>
+              <dl class="minis"><div><dt>Co tydzień</dt><dd>podsumowanie tygodnia</dd></div><div><dt>Uwaga</dt><dd>gdy kategoria rośnie za szybko</dd></div><div><dt>Spotkanie</dt><dd>tematy na rozmowę we dwoje</dd></div></dl>
+            </div>
+            <div class="feat__screen fs fs--alerts">
+              <header class="fs__top"><h4>Powiadomienia</h4><span class="badge"><span class="pt pt--empty" aria-hidden="true"></span>W przygotowaniu</span></header>
+              <!-- Animated List – komponent z 21st.dev (Magic UI), przeniesiony z React/framer-motion do JS -->
+              <div class="alist" id="alertList" aria-label="Przykładowe powiadomienia Finvilo"></div>
+            </div>
+          </article>
+        </div>
+
+        <aside class="nogoal">
+          <div>
+            <h3 data-words>Nie macie jeszcze celu? <mark class="hl hl--sun">To nic.</mark></h3>
+            <p>Zacznijcie od samego monitorowania wydatków. Kiedy zobaczycie, ile Wam co miesiąc zostaje, cel przyjdzie sam.</p>
+          </div>
+          <a class="btn" href="#test">Chcemy monitorować wydatki</a>
+        </aside>
+      </div>
+    </section>
+
+    <!-- 6: kalkulator – krok 1, działa teraz -->
+    <section class="calc" id="kalkulator" aria-labelledby="calcTitle">
+      <div class="wrap">
+        <header class="calc__head">
+          <p class="status status--live"><span class="pt pt--full" aria-hidden="true"></span>Krok 1 · działa już teraz</p>
+          <h2 id="calcTitle" data-words>Wypróbujcie krok 1: <mark class="hl hl--sun">ile odkładać</mark> na wspólny cel?</h2>
+          <p class="lead">Policzenie celu to pierwszy krok. Wpiszcie przybliżone liczby – wynik zmienia się od razu.</p>
+        </header>
+
+        <div class="calc__grid">
+          <form class="calc__form panel" id="calcForm" novalidate>
+            <fieldset class="field">
+              <legend>Na co odkładacie?</legend>
+              <div class="chips" role="radiogroup">
+                <label class="chip"><input type="radio" name="goal" value="Mieszkanie"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11 12 4l8 7v9H4z M10 20v-5h4v5"/></svg>Mieszkanie</label>
+                <label class="chip"><input type="radio" name="goal" value="Auto"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 16v-4l2-5h14l2 5v4H3z M3 12h18"/><circle cx="7.5" cy="16.5" r="1.8"/><circle cx="16.5" cy="16.5" r="1.8"/></svg>Auto</label>
+                <label class="chip"><input type="radio" name="goal" value="Wakacje" checked><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14v12H5z M9 8V5h6v3 M9 12v4 M15 12v4"/></svg>Wakacje</label>
+                <label class="chip"><input type="radio" name="goal" value="inne"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 2.4 5 5.4.6-4 3.7 1.1 5.4L12 16l-4.9 2.7 1.1-5.4-4-3.7 5.4-.6z"/></svg>Coś innego</label>
+              </div>
+              <div class="field__other" id="otherWrap" hidden>
+                <label for="otherName">Nazwa celu</label>
+                <input id="otherName" type="text" maxlength="40" placeholder="np. Remont kuchni">
+              </div>
+            </fieldset>
+
+            <div class="row2">
+              <div class="field">
+                <label for="goalAmount">Ile kosztuje cel?</label>
+                <div class="money"><input id="goalAmount" type="text" inputmode="numeric" autocomplete="off" value="12 000" aria-describedby="goalErr"><span>zł</span></div>
+                <p class="err" id="goalErr"></p>
+              </div>
+              <div class="field">
+                <label for="savedAmount">Ile już macie?</label>
+                <div class="money"><input id="savedAmount" type="text" inputmode="numeric" autocomplete="off" value="2 000" aria-describedby="savedErr"><span>zł</span></div>
+                <p class="err" id="savedErr"></p>
+              </div>
+            </div>
+
+            <fieldset class="field">
+              <legend>Co już wiecie?</legend>
+              <div class="seg" role="radiogroup">
+                <label><input type="radio" name="mode" value="term" checked><span>Mamy termin</span></label>
+                <label><input type="radio" name="mode" value="monthly"><span>Mamy miesięczną kwotę</span></label>
+              </div>
+            </fieldset>
+
+            <div class="field" id="termWrap">
+              <label for="monthsNum">Za ile miesięcy?</label>
+              <div class="range">
+                <input id="monthsRange" type="range" min="1" max="120" value="10" aria-label="Liczba miesięcy – suwak">
+                <input id="monthsNum" type="number" min="1" max="360" value="10" inputmode="numeric" aria-describedby="monthsErr monthsHint">
+              </div>
+              <p class="hint" id="monthsHint"></p>
+              <p class="err" id="monthsErr"></p>
+            </div>
+
+            <div class="field" id="monthlyWrap" hidden>
+              <label for="monthlyAmount">Ile możecie odkładać co miesiąc?</label>
+              <div class="money"><input id="monthlyAmount" type="text" inputmode="numeric" autocomplete="off" value="1 000" aria-describedby="monthlyErr"><span>zł</span></div>
+              <p class="err" id="monthlyErr"></p>
+            </div>
+
+            <button type="button" class="link link--btn" id="exampleBtn">Wczytajcie przykładową parę (dane fikcyjne)</button>
+            <p class="mini" aria-hidden="true"><span>Wynik</span><b id="miniResult"></b></p>
+            <p class="example-note" id="exampleNote" hidden>Przykład: Ola i Kuba – fikcyjna para – odkładają na wkład własny do mieszkania.</p>
+          </form>
+
+          <div class="calc__out panel panel--out">
+            <div class="result" aria-live="polite" id="result">
+              <p class="result__label" id="resLabel">Odkładajcie</p>
+              <p class="result__value"><span id="resValue">1 000 zł</span><small id="resUnit">miesięcznie</small></p>
+              <p class="result__sub" id="resSub">przez 10 miesięcy · cel w&nbsp;…</p>
+            </div>
+            <div class="chart">
+              <svg id="chart" viewBox="0 0 640 340" role="img" aria-labelledby="chartDesc">
+                <desc id="chartDesc">Wykres drogi do celu: odłożona kwota rośnie co miesiąc od dzisiejszej kwoty do kwoty celu.</desc>
+              </svg>
+            </div>
+            <div class="out__actions">
+              <button type="button" class="btn" id="playBtn">Zobaczcie drogę do celu</button>
+              <p class="chart__progress" id="playInfo" aria-hidden="true"></p>
+              <p class="done" id="doneMsg" aria-live="polite"></p>
+            </div>
+            <p class="test-link">Co dalej? W aplikacji ta kwota stanie się pozycją „Na wspólne cele” w Waszym budżecie, a cotygodniowe alerty powiedzą, czy idziecie zgodnie z planem. <a class="link" href="#test">Testy aplikacji – wkrótce</a></p>
+            <p class="fine">Wyliczenie bez oprocentowania i inflacji – to plan orientacyjny, nie porada finansowa. Liczymy w Waszej przeglądarce: wpisanych kwot nie wysyłamy ani nie zapisujemy.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5b: zapis na test prototypu -->
+    <section class="test" id="test" aria-labelledby="testTitle">
+      <div class="wrap test__grid">
+        <div class="test__copy">
+          <p class="kicker">Test prototypu</p>
+          <h2 id="testTitle" data-words>Pomóżcie nam <mark class="hl hl--mint">zbudować Finvilo</mark></h2>
+          <p class="lead">Szukamy 5 par, które przetestują pierwszą wersję – planowanie budżetu i monitorowanie wydatków – i powiedzą wprost, co działa, a co nie.</p>
+          <div class="test__pairs" aria-hidden="true">
+            <span class="pt pt--empty"></span><span class="pt pt--empty"></span><span class="pt pt--empty"></span><span class="pt pt--empty"></span><span class="pt pt--empty"></span>
+          </div>
+        </div>
+
+        <div class="test__soon panel">
+          <span class="badge"><span class="pt pt--empty" aria-hidden="true"></span>Zapisy wkrótce</span>
+          <h3>Zapisy na test ruszą wkrótce</h3>
+          <p>Pierwsza wersja z planowaniem budżetu i monitorowaniem wydatków jest w przygotowaniu. Gdy otworzymy zapisy, pojawi się tu krótki formularz.</p>
+          <a class="btn" href="#kalkulator">Tymczasem policzcie swój cel</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6: prywatność -->
+    <section class="privacy" aria-label="Prywatność kalkulatora">
+      <div class="wrap privacy__in">
+        <span class="pt pt--full pt--big" aria-hidden="true"></span>
+        <p>Kalkulator liczy w Waszej przeglądarce. <span>Wpisanych kwot nie wysyłamy ani nie zapisujemy.</span></p>
+      </div>
+    </section>
+
+    <!-- 7: finał -->
+    <section class="final" id="final" aria-labelledby="finalTitle">
+      <div class="aurora" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <div class="wrap final__grid">
+        <svg class="final__mark" id="finalMark" viewBox="0 0 200 240" aria-hidden="true">
+          <path class="final__ghost" d="M50 220V30h120M50 120h80"/>
+          <path class="final__draw" id="finalDraw" pathLength="1" d="M50 220V30h70M50 120h40"/>
+          <path class="final__goal" id="finalGoal" pathLength="1" d="M120 30h50"/>
+          <circle class="final__dot" cx="170" cy="30" r="9"/>
+        </svg>
+        <div class="final__copy">
+          <h2 id="finalTitle" data-words>Zacznijcie od celu. <span class="grad-text serif">Spokój przyjdzie sam.</span></h2>
+          <p class="lead">Policzcie wspólny cel już dziś. Budżet, wydatki z banku i comiesięczne spotkania dołączą razem z aplikacją.</p>
+          <div class="actions">
+            <a class="btn btn--light" href="#kalkulator">Policzcie swój cel</a>
+            <a class="link link--light" href="#aplikacja">Zobaczcie aplikację</a>
+          </div>
+        </div>
+      </div>
+      <footer class="foot wrap">
+        <span>© 2026 Finvilo · produkt w przygotowaniu</span>
+        <span>Przykłady na stronie zawierają dane fikcyjne.</span>
+      </footer>
+    </section>
+  </main>
+
+  <script src="main.js?v=19"></script>
+</body>
+</html>
